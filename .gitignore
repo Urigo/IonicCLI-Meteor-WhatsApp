@@ -6,3 +6,5 @@ platforms/
 plugins/
 .idea
 www/lib/
+www/css/
+www/js/
