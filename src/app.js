@@ -5,6 +5,7 @@ import StatusBar from 'cordova/status-bar';
 import Loader from 'angular-ecmascript/module-loader';
 
 import ChatsCtrl from './controllers/chats.controller';
+import CalendarFilter from './filters/calendar.filter';
 import RoutesConfig from './routes';
 
 const App = 'whatsapp';
@@ -15,6 +16,7 @@ Angular.module(App, [
 
 new Loader(App)
   .load(ChatsCtrl)
+  .load(CalendarFilter)
   .load(RoutesConfig);
 
 Ionic.Platform.ready(() => {
