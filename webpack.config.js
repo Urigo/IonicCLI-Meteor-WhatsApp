@@ -14,7 +14,8 @@ module.exports = {
     {
       angular: true,
       cordova: true,
-      ionic: true
+      ionic: true,
+      moment: true
     },
     customExternals
   ],
