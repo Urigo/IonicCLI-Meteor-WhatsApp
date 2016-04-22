@@ -4,6 +4,7 @@ import Keyboard from 'cordova/keyboard';
 import StatusBar from 'cordova/status-bar';
 
 import Loader from './loader';
+import ChatsCtrl from './controllers/chats.controller';
 import RoutesConfig from './routes';
 
 export const App = Angular.module('whatsapp', [
@@ -11,6 +12,7 @@ export const App = Angular.module('whatsapp', [
 ]);
 
 new Loader(App)
+  .load(ChatsCtrl)
   .load(RoutesConfig);
 
 Ionic.Platform.ready(() => {
