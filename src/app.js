@@ -3,9 +3,15 @@ import ionic from 'ionic';
 import keyboard from 'cordova/keyboard';
 import statusbar from 'cordova/status-bar';
 
+import Loader from './loader';
+import RoutesConfig from './routes';
+
 export const App = angular.module('whatsapp', [
   'ionic'
 ]);
+
+new Loader(App)
+  .load(RoutesConfig);
 
 ionic.Platform.ready(() => {
   if (keyboard) {
