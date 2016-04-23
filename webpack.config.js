@@ -3,6 +3,7 @@ var path = require('path');
 
 module.exports = {
   entry: [
+    './api/server/common.js',
     './src/app.js'
   ],
   output: {
@@ -26,13 +27,27 @@ module.exports = {
     }]
   },
   resolve: {
-    extensions: ['', '.js']
+    extensions: ['', '.js'],
+    alias: {
+      api: path.join(__dirname, 'api/server')
+    }
   }
 };
 
 function customExternals(context, request, callback) {
-  return cordovaPlugin(request, callback) ||
+  return meteorPack(request, callback) ||
+         cordovaPlugin(request, callback) ||
          callback();
+}
+
+function meteorPack(request, callback) {
+  var match = request.match(/^meteor\/(.+)$/);
+  var pack = match && match[1];
+
+  if (pack) {
+    callback(null, 'Package["' + pack + '"]' );
+    return true;
+  }
 }
 
 function cordovaPlugin(request, callback) {
