@@ -16,6 +16,7 @@
     "gulp-sass": "^2.0.4",
     "lodash.camelcase": "^4.1.1",
     "lodash.upperfirst": "^4.2.0",
+    "meteor-node-stubs": "^0.2.3",
     "moment": "^2.13.0",
     "webpack": "^1.13.0"
   },
