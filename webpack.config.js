@@ -3,11 +3,11 @@ var path = require('path');
 
 module.exports = {
   entry: [
-    './server/common.js',
-    './src/app.js'
+    './src/server/common.js',
+    './src/client/app.js'
   ],
   output: {
-    path: path.join(__dirname, './www/js'),
+    path: path.join(__dirname, 'www/js'),
     filename: 'app.bundle.js'
   },
   externals: [
@@ -29,7 +29,7 @@ module.exports = {
   resolve: {
     extensions: ['', '.js'],
     alias: {
-      server: path.join(__dirname, 'server')
+      server: path.join(__dirname, 'src/server')
     }
   }
 };
