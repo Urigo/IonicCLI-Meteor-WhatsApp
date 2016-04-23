@@ -9,6 +9,7 @@ import CalendarFilter from './filters/calendar.filter';
 import RoutesConfig from './routes';
 
 export const App = Angular.module('whatsapp', [
+  'angular-meteor',
   'ionic'
 ]);
 
