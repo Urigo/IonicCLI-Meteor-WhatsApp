@@ -11,6 +11,7 @@ import RoutesConfig from './routes';
 const App = 'whatsapp';
 
 Angular.module(App, [
+  'angular-meteor',
   'ionic'
 ]);
 
