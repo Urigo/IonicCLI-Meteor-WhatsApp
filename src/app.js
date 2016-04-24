@@ -4,6 +4,7 @@ import Keyboard from 'cordova/keyboard';
 import StatusBar from 'cordova/status-bar';
 import Loader from 'angular-ecmascript/module-loader';
 
+import ChatCtrl from './controllers/chat.controller';
 import ChatsCtrl from './controllers/chats.controller';
 import CalendarFilter from './filters/calendar.filter';
 import RoutesConfig from './routes';
@@ -16,6 +17,7 @@ Angular.module(App, [
 ]);
 
 new Loader(App)
+  .load(ChatCtrl)
   .load(ChatsCtrl)
   .load(CalendarFilter)
   .load(RoutesConfig);
