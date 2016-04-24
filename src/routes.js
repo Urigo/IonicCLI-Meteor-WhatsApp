@@ -18,6 +18,15 @@ export default class RoutesConfig extends Config {
             controller: 'ChatsCtrl as chats'
           }
         }
+      })
+      .state('tab.chat', {
+        url: '/chats/:chatId',
+        views: {
+          'tab-chats': {
+            templateUrl: 'templates/chat.html',
+            controller: 'ChatCtrl as chat'
+          }
+        }
       });
 
     this.$urlRouterProvider.otherwise('tab/chats');
