@@ -8,5 +8,7 @@ import 'lib/ionic/js/ionic-angular.js';
 import 'lib/meteor-client-side/dist/meteor-client-side.bundle';
 import 'lib/angular-meteor/dist/angular-meteor';
 import 'lib/angular-moment/angular-moment.js';
+// api
+import 'api/methods';
 // app
 import './app';
