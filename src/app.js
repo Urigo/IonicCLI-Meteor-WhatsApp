@@ -6,6 +6,7 @@ import StatusBar from 'cordova/status-bar';
 import Loader from './loader';
 import ChatCtrl from './controllers/chat.controller';
 import ChatsCtrl from './controllers/chats.controller';
+import InputDirective from './directives/input.directive';
 import CalendarFilter from './filters/calendar.filter';
 import RoutesConfig from './routes';
 
@@ -18,6 +19,7 @@ export const App = Angular.module('whatsapp', [
 new Loader(App)
   .load(ChatCtrl)
   .load(ChatsCtrl)
+  .load(InputDirective)
   .load(CalendarFilter)
   .load(RoutesConfig);
 
