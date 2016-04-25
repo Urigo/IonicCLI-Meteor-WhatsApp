@@ -10,5 +10,7 @@ import 'script!lib/ionic/js/ionic-angular';
 import 'script!meteor-client-side/dist/meteor-client-side.bundle';
 import 'script!angular-meteor/dist/angular-meteor.bundle';
 import 'script!angular-moment/angular-moment';
+// api
+import 'api/methods';
 // app
 import './app';
