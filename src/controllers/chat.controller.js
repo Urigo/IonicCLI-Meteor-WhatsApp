@@ -1,5 +1,6 @@
 import Ionic from 'ionic';
 import Keyboard from 'cordova/keyboard';
+import { _ } from 'meteor/underscore';
 import { Chats, Messages } from 'api/collections';
 import { Controller } from '../entities';
 
@@ -20,6 +21,17 @@ export default class ChatCtrl extends Controller {
         return Chats.findOne(this.chatId);
       }
     });
+  }
+
+  sendMessage() {
+    if (_.isEmpty(this.message)) return;
+
+    this.callMethod('newMessage', {
+      text: this.message,
+      chatId: this.chatId
+    });
+
+    delete this.message;
   }
 
   inputUp () {
