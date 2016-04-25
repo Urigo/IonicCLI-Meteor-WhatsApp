@@ -13,6 +13,7 @@ const App = 'whatsapp';
 
 Angular.module(App, [
   'angular-meteor',
+  'angularMoment',
   'ionic'
 ]);
 
