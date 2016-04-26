@@ -5,5 +5,7 @@ import 'lib/angular-sanitize/angular-sanitize.js';
 import 'lib/angular-ui-router/release/angular-ui-router.js';
 import 'lib/ionic/js/ionic.js';
 import 'lib/ionic/js/ionic-angular.js';
+import 'lib/meteor-client-side/dist/meteor-client-side.bundle';
+import 'lib/angular-meteor/dist/angular-meteor';
 // app
 import './app';
