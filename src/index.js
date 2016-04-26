@@ -1,0 +1,9 @@
+// libs
+import 'lib/angular/angular.js';
+import 'lib/angular-animate/angular-animate.js';
+import 'lib/angular-sanitize/angular-sanitize.js';
+import 'lib/angular-ui-router/release/angular-ui-router.js';
+import 'lib/ionic/js/ionic.js';
+import 'lib/ionic/js/ionic-angular.js';
+// app
+import './app';
