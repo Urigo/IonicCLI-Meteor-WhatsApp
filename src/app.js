@@ -6,6 +6,7 @@ import Loader from 'angular-ecmascript/module-loader';
 
 import ChatCtrl from './controllers/chat.controller';
 import ChatsCtrl from './controllers/chats.controller';
+import ConfirmationCtrl from './controllers/confirmation.controller';
 import LoginCtrl from './controllers/login.controller';
 import InputDirective from './directives/input.directive';
 import CalendarFilter from './filters/calendar.filter';
@@ -23,6 +24,7 @@ Angular.module(App, [
 new Loader(App)
   .load(ChatCtrl)
   .load(ChatsCtrl)
+  .load(ConfirmationCtrl)
   .load(LoginCtrl)
   .load(InputDirective)
   .load(CalendarFilter)
