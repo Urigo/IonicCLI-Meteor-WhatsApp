@@ -1,6 +1,7 @@
-import { Config } from 'angular-ecmascript/module-helpers';
+import { _ } from 'meteor/underscore';
+import { Config, Runner } from 'angular-ecmascript/module-helpers';
 
-export default class RoutesConfig extends Config {
+class RoutesConfig extends Config {
   static $inject = ['$stateProvider', '$urlRouterProvider']
 
   constructor() {
@@ -45,3 +46,19 @@ export default class RoutesConfig extends Config {
     return $auth.awaitUser();
   }
 }
+
+class RoutesRunner extends Runner {
+  static $inject = ['$rootScope', '$state']
+
+  run() {
+    this.$rootScope.$on('$stateChangeError', (...args) => {
+      const err = _.last(args);
+
+      if (err === 'AUTH_REQUIRED') {
+        this.$state.go('login');
+      }
+    });
+  }
+}
+
+export default [RoutesConfig, RoutesRunner];
