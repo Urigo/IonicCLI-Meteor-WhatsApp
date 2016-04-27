@@ -8,7 +8,7 @@ import ChatCtrl from './controllers/chat.controller';
 import ChatsCtrl from './controllers/chats.controller';
 import InputDirective from './directives/input.directive';
 import CalendarFilter from './filters/calendar.filter';
-import RoutesConfig from './routes';
+import { RoutesConfig, RoutesRunner } from './routes';
 
 export const App = Angular.module('whatsapp', [
   'angular-meteor',
@@ -22,7 +22,8 @@ new Loader(App)
   .load(ChatsCtrl)
   .load(InputDirective)
   .load(CalendarFilter)
-  .load(RoutesConfig);
+  .load(RoutesConfig)
+  .load(RoutesRunner);
 
 Ionic.Platform.ready(() => {
   if (Keyboard) {
