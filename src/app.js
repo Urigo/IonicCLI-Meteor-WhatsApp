@@ -8,7 +8,7 @@ import ChatCtrl from './controllers/chat.controller';
 import ChatsCtrl from './controllers/chats.controller';
 import InputDirective from './directives/input.directive';
 import CalendarFilter from './filters/calendar.filter';
-import RoutesConfig from './routes';
+import Routes from './routes';
 
 const App = 'whatsapp';
 
@@ -24,7 +24,7 @@ new Loader(App)
   .load(ChatsCtrl)
   .load(InputDirective)
   .load(CalendarFilter)
-  .load(RoutesConfig);
+  .load(Routes);
 
 Ionic.Platform.ready(() => {
   if (Keyboard) {
