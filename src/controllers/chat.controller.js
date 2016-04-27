@@ -21,6 +21,8 @@ export default class ChatCtrl extends Controller {
         return Chats.findOne(this.chatId);
       }
     });
+
+    this.autoScrollBottom();
   }
 
   sendMessage() {
@@ -54,6 +56,17 @@ export default class ChatCtrl extends Controller {
     if (Keyboard) {
       Keyboard.close();
     }
+  }
+
+  autoScrollBottom() {
+    let recentMessagesNum = this.messages.length;
+
+    this.autorun(() => {
+      const currMessagesNum = this.getCollectionReactively('messages').length;
+      const animate = recentMessagesNum != currMessagesNum;
+      recentMessagesNum = currMessagesNum;
+      this.scrollBottom(animate);
+    });
   }
 
   scrollBottom(animate) {
