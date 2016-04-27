@@ -37,6 +37,15 @@ export class RoutesConfig extends Config {
           }
         }
       })
+      .state('tab.settings', {
+        url: '/settings',
+        views: {
+          'tab-settings': {
+            templateUrl: 'templates/settings.html',
+            controller: 'SettingsCtrl as settings',
+          }
+        }
+      })
       .state('login', {
         url: '/login',
         templateUrl: 'templates/login.html',
