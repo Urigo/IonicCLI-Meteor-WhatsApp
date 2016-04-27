@@ -1,6 +1,6 @@
-import { Config } from './entities';
+import { Config, Runner } from './entities';
 
-export default class RoutesConfig extends Config {
+export class RoutesConfig extends Config {
   static $inject = ['$stateProvider', '$urlRouterProvider']
 
   constructor() {
@@ -43,5 +43,19 @@ export default class RoutesConfig extends Config {
 
   isAuthorized($auth) {
     return $auth.awaitUser();
+  }
+}
+
+export class RoutesRunner extends Runner {
+  static $inject = ['$rootScope', '$state']
+
+  run() {
+    this.$rootScope.$on('$stateChangeError', (...args) => {
+      const err = _.last(args);
+
+      if (err === 'AUTH_REQUIRED') {
+        this.$state.go('login');
+      }
+    });
   }
 }
