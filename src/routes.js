@@ -54,6 +54,15 @@ export class RoutesConfig extends Config {
         resolve: {
           user: this.isAuthorized
         }
+      })
+      .state('tab.settings', {
+        url: '/settings',
+        views: {
+          'tab-settings': {
+            templateUrl: 'templates/settings.html',
+            controller: 'SettingsCtrl as settings',
+          }
+        }
       });
 
     this.$urlRouterProvider.otherwise('tab/chats');
