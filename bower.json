@@ -7,6 +7,8 @@
   "dependencies": {
     "meteor-client-side": "^1.3.1",
     "angular-meteor": "^1.3.10",
-    "angular-moment": "^0.10.3"
+    "angular-moment": "^0.10.3",
+    "accounts-phone": "^0.0.21",
+    "angular-meteor-auth": "^1.0.2"
   }
 }
