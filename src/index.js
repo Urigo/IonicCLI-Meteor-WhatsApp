@@ -8,7 +8,10 @@ import 'script!lib/angular-ui-router/release/angular-ui-router';
 import 'script!lib/ionic/js/ionic';
 import 'script!lib/ionic/js/ionic-angular';
 import 'script!lib/meteor-client-side/dist/meteor-client-side.bundle';
+import 'script!lib/accounts-base-client-side/dist/accounts-base-client-side.bundle';
+import 'script!lib/accounts-phone/dist/accounts-phone.bundle';
 import 'script!lib/angular-meteor/dist/angular-meteor.bundle';
+import 'script!lib/angular-meteor-auth/dist/angular-meteor-auth.bundle';
 import 'script!lib/angular-moment/angular-moment';
 // api
 import 'api/methods';
