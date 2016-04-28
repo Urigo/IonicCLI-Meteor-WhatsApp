@@ -14,6 +14,7 @@ const App = 'whatsapp';
 
 Angular.module(App, [
   'angular-meteor',
+  'angular-meteor.auth',
   'angularMoment',
   'ionic'
 ]);
