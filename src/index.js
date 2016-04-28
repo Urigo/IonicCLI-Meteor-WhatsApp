@@ -1,3 +1,5 @@
+// modules
+import 'expose?moment!moment';
 // libs
 import 'script!lib/angular/angular';
 import 'script!lib/angular-animate/angular-animate';
