@@ -12,6 +12,7 @@ import ProfileCtrl from './controllers/profile.controller';
 import SettingsCtrl from './controllers/settings.controller';
 import InputDirective from './directives/input.directive';
 import CalendarFilter from './filters/calendar.filter';
+import NewChatService from './services/new-chat.service';
 import Routes from './routes';
 
 const App = 'whatsapp';
@@ -32,6 +33,7 @@ new Loader(App)
   .load(SettingsCtrl)
   .load(InputDirective)
   .load(CalendarFilter)
+  .load(NewChatService)
   .load(Routes);
 
 Ionic.Platform.ready(() => {
