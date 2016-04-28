@@ -17,7 +17,6 @@ standard-minifier-js@1.2.0_1    # JS minifier run for production mode
 es5-shim@4.6.14_1                # ECMAScript 5 compatibility for older browsers.
 ecmascript@0.5.8_1              # Enable ECMAScript2015+ syntax in app code
 
-autopublish@1.0.7             # Publish all data to the clients (for prototyping)
 shell-server
 check
 npm-bcrypt@0.8.7
