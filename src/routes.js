@@ -1,3 +1,4 @@
+import { Meteor } from 'meteor/meteor';
 import { Config, Runner } from './entities';
 
 export class RoutesConfig extends Config {
@@ -16,7 +17,10 @@ export class RoutesConfig extends Config {
         abstract: true,
         templateUrl: 'templates/tabs.html',
         resolve: {
-          user: this.isAuthorized
+          user: this.isAuthorized,
+          chats() {
+            return Meteor.subscribe('chats');
+          }
         }
       })
       .state('tab.chats', {
