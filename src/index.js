@@ -9,5 +9,6 @@ import 'script!lib/ionic/js/ionic';
 import 'script!lib/ionic/js/ionic-angular';
 import 'script!lib/meteor-client-side/dist/meteor-client-side.bundle';
 import 'script!lib/angular-meteor/dist/angular-meteor.bundle';
+import 'script!lib/angular-moment/angular-moment';
 // app
 import './app';
