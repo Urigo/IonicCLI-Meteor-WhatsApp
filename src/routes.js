@@ -37,6 +37,11 @@ class RoutesConfig extends Config {
             controller: 'ChatCtrl as chat'
           }
         }
+      })
+      .state('login', {
+        url: '/login',
+        templateUrl: 'templates/login.html',
+        controller: 'LoginCtrl as logger'
       });
 
     this.$urlRouterProvider.otherwise('tab/chats');
