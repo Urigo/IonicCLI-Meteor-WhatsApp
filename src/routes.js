@@ -41,6 +41,11 @@ export class RoutesConfig extends Config {
         url: '/login',
         templateUrl: 'templates/login.html',
         controller: 'LoginCtrl as logger'
+      })
+      .state('confirmation', {
+        url: '/confirmation/:phone',
+        templateUrl: 'templates/confirmation.html',
+        controller: 'ConfirmationCtrl as confirmation'
       });
 
     this.$urlRouterProvider.otherwise('tab/chats');
