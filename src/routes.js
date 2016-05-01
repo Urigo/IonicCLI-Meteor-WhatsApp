@@ -47,6 +47,14 @@ class RoutesConfig extends Config {
         url: '/confirmation/:phone',
         templateUrl: 'templates/confirmation.html',
         controller: 'ConfirmationCtrl as confirmation'
+      })
+      .state('profile', {
+        url: '/profile',
+        templateUrl: 'templates/profile.html',
+        controller: 'ProfileCtrl as profile',
+        resolve: {
+          user: this.isAuthorized
+        }
       });
 
     this.$urlRouterProvider.otherwise('tab/chats');
